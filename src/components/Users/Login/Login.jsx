@@ -8,12 +8,10 @@ const Login = () => {
     email: "",
     password: "",
   });
+  
   const navigate = useNavigate();
 
   const handleInputChange = (event) => {
-    console.log(event.target.name);
-    console.log(event.target.value);
-
     setUser({
       ...user,
       [event.target.name]: event.target.value,

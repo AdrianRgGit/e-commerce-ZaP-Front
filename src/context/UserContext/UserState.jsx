@@ -18,7 +18,6 @@ export const UserProvider = ({ children }) => {
 
   const login = async (user) => {
     const res = await axios.post(API_URL + "users/login", user);
-    console.log("ruta")
 
     dispatch({
       type: "LOGIN",
