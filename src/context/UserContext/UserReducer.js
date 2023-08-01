@@ -1,10 +1,9 @@
 const users = (state, action) => {
   switch (action.type) {
-    case "GET_USERS":
-      console.log(action.payload);
+    case "LOGIN":
       return {
         ...state,
-        users: action.payload,
+        token: action.payload.token,
       };
 
     default:
