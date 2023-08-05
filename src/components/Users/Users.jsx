@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Login/Login";
 import Logout from "./Logout/Logout";
-import ShowUsers from "./ShowUsers/ShowUsers";
 import { UserProvider } from "../../context/UserContext/UserState";
+import UserInfo from "./UserInfo/UserInfo";
 
 function Users() {
   return (
@@ -12,6 +12,7 @@ function Users() {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
+            <Route path="/logout" element={<UserInfo />} />
           </Routes>
         </UserProvider>
       </BrowserRouter>

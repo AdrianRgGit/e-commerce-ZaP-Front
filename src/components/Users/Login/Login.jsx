@@ -21,6 +21,7 @@ const Login = () => {
   const onSubmit = (event) => {
     event.preventDefault();
     login(user);
+    navigate("/")
   };
 
   return (
