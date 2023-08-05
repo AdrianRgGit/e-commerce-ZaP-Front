@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import { UserProvider } from "./context/UserContext/UserState";
 import Users from "./components/Users/Users";
 import Home from "./components/Home/Home";
