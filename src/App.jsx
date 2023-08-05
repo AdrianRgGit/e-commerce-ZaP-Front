@@ -11,15 +11,16 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        {/* Header */}
-        <Header />
-        {/* Home */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-
-        {/* Users */}
         <UserProvider>
+          {/* Header */}
+          <Header />
+          
+          {/* Home */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+
+          {/* Users */}
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />

@@ -3,7 +3,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../../context/UserContext/UserState";
 
 const NavBar = () => {
-  const { token } = useContext(UserContext);
+  const { token, logout } = useContext(UserContext);
+
+  const logoutUser = (event) => {
+    event.preventDefault();
+    logout();
+  };
 
   return (
     <nav className="nav-bar">
@@ -11,7 +16,9 @@ const NavBar = () => {
 
       {token ? (
         <>
-          <Link to="/logout">Logout</Link>
+          <Link to="/logout" onClick={logoutUser}>
+            Logout
+          </Link>
           <Link to="/profile">Profile</Link>
         </>
       ) : (
