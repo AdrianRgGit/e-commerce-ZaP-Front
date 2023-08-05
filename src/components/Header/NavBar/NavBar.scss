@@ -1,0 +1,10 @@
+@import "../../../index.scss";
+
+a{
+    color: $primary-color;
+}
+
+a:hover{
+    color: $primary-color;
+    opacity: 0.5;
+}
