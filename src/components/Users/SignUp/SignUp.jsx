@@ -8,12 +8,13 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const onSubmit = (values) => {
-    console.log(values);
     signUp(values);
+
     notification.success({
       message: "Successfully registered",
     });
     setTimeout(() => {
+      login(values);
       navigate("/");
     }, 3000);
   };
