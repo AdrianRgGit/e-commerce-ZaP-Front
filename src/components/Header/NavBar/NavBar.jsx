@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../../context/UserContext/UserState";
 
-import "./NavBar.scss"
+import "./NavBar.scss";
 
 const NavBar = () => {
   const { token, logout } = useContext(UserContext);
@@ -19,12 +19,15 @@ const NavBar = () => {
       {token ? (
         <>
           <Link to="/logout" onClick={logoutUser}>
-            Logout
+            Logout |
           </Link>
-          <Link to="/profile">Profile</Link>
+          <Link to="/profile">Profile |</Link>
         </>
       ) : (
-        <Link to="/login">Login</Link>
+        <>
+          <Link to="/login"> | Login</Link>
+          <Link to="/signup"> | Sign up</Link>
+        </>
       )}
     </nav>
   );

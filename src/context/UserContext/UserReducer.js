@@ -1,5 +1,11 @@
 const users = (state, action) => {
   switch (action.type) {
+    case "SIGNUP":
+      return {
+        ...state,
+        user: action.payload,
+      };
+
     case "LOGIN":
       return {
         ...state,

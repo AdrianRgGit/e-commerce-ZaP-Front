@@ -12,7 +12,8 @@ function Users() {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
-            <Route path="/logout" element={<UserInfo />} />
+            <Route path="/userinfo" element={<UserInfo />} />
+            <Route path="/userinfo" element={<UserInfo />} />
           </Routes>
         </UserProvider>
       </BrowserRouter>
