@@ -1,11 +1,12 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../../context/UserContext/UserState";
 
 import "./NavBar.scss";
+import { Spin } from "antd";
 
 const NavBar = () => {
-  const { token, logout } = useContext(UserContext);
+  const { token, user, logout, getUserInfo } = useContext(UserContext);
 
   const logoutUser = (event) => {
     event.preventDefault();
@@ -22,6 +23,7 @@ const NavBar = () => {
             Logout |
           </Link>
           <Link to="/profile">Profile |</Link>
+          <div></div>
         </>
       ) : (
         <>

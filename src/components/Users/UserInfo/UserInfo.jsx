@@ -5,13 +5,16 @@ import { Spin } from "antd";
 const UserInfo = () => {
   const { user, getUserInfo } = useContext(UserContext);
 
-  useEffect(() => {
-    getUserInfo();
-  }, []);
-  
-  if (!user) {
-    return <Spin size="large" />;
-  }
+    useEffect(() => {
+      getUserInfo();
+    }, []);
+
+    if (!user) {
+      return <Spin size="large" />;
+    }
+
+    const { name } = user.getUser;
+    console.log(name);
 
   return (
     <div>

@@ -20,7 +20,6 @@ const users = (state, action) => {
       };
 
     case "GET_USER_INFO":
-      console.log(action.payload);
       return {
         ...state,
         user: action.payload,
