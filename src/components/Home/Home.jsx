@@ -5,13 +5,7 @@ import Products from "./Products/Products";
 const Home = () => {
   return (
     <>
-      <BrowserRouter>
-        <ProductProvider>
-          <Routes>
-            <Route path="/" element={<Products />} />
-          </Routes>
-        </ProductProvider>
-      </BrowserRouter>
+      <div>hola</div>
     </>
   );
 };

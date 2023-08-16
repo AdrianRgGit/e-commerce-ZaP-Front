@@ -23,7 +23,6 @@ function App() {
             {/* Home */}
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/" element={<Products />} />
             </Routes>
 
             {/* Users */}
