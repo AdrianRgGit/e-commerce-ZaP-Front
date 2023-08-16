@@ -15,20 +15,20 @@ const NavBar = () => {
 
   return (
     <nav className="nav-bar">
-      <Link to="/">Home</Link>
+      <Link to="/">Home | </Link>
 
       {token ? (
         <>
           <Link to="/logout" onClick={logoutUser}>
             Logout |
           </Link>
-          <Link to="/profile">Profile |</Link>
+          <Link to="/profile"> Profile </Link>
           <div></div>
         </>
       ) : (
         <>
-          <Link to="/login"> | Login</Link>
-          <Link to="/signup"> | Sign up</Link>
+          <Link to="/login"> Login |</Link>
+          <Link to="/signup"> Sign up</Link>
         </>
       )}
     </nav>
