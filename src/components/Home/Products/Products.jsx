@@ -3,7 +3,7 @@ import { ProductContext } from "../../../context/ProductContext/ProductState";
 import { Card, Spin } from "antd";
 
 const Products = () => {
-  const { getProducts, products } = useContext(ProductContext);
+  const { products, cart, getProducts, addCart } = useContext(ProductContext);
 
   useEffect(() => {
     getProducts();
@@ -13,9 +13,14 @@ const Products = () => {
     return <Spin size="large" />;
   }
 
+  // useEffect(() => {
+  //   localStorage.setItem("cart", JSON.stringify(cart));
+  // }, [cart]);
+
   const product = products.map((product) => {
     return (
       <Card
+        key={product.id}
         title={product.brand}
         style={{
           display: "flex",
@@ -24,8 +29,8 @@ const Products = () => {
           padding: 10,
         }}
       >
-        <button>Add to cart</button>
-        
+        <button onClick={() => addCart(product)}>Add cart</button>
+
         <img
           src={product.image}
           style={{

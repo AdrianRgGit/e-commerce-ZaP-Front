@@ -22,8 +22,8 @@ const NavBar = () => {
           <Link to="/logout" onClick={logoutUser}>
             Logout |
           </Link>
-          <Link to="/profile"> Profile </Link>
-          <div></div>
+          <Link to="/profile"> Profile |</Link>
+          <Link to="/cart"> Cart</Link>
         </>
       ) : (
         <>
