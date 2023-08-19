@@ -9,7 +9,7 @@ const initialState = {
   user: null,
 };
 
-const API_URL = "http://localhost:8080/";
+const API_URL = "http://localhost:8080/users/";
 
 export const UserContext = createContext(initialState);
 
@@ -17,7 +17,7 @@ export const UserProvider = ({ children }) => {
   const [state, dispatch] = useReducer(UserReducer, initialState);
 
   const signUp = async (user) => {
-    const res = await axios.post(API_URL + "users/createuser", user);
+    const res = await axios.post(API_URL + "createuser", user);
 
     dispatch({
       type: "SIGNUP",
@@ -26,7 +26,7 @@ export const UserProvider = ({ children }) => {
   };
 
   const login = async (user) => {
-    const res = await axios.post(API_URL + "users/login", user);
+    const res = await axios.post(API_URL + "login", user);
 
     dispatch({
       type: "LOGIN",
@@ -40,7 +40,7 @@ export const UserProvider = ({ children }) => {
 
   const logout = async () => {
     const token = JSON.parse(localStorage.getItem("token"));
-    const res = await axios.delete(API_URL + "users/logout", {
+    const res = await axios.delete(API_URL + "logout", {
       headers: {
         Authorization: token,
       },
@@ -57,7 +57,7 @@ export const UserProvider = ({ children }) => {
 
   const getUserInfo = async () => {
     const token = JSON.parse(localStorage.getItem("token"));
-    const res = await axios.get(API_URL + "users/showuserregistered", {
+    const res = await axios.get(API_URL + "showuserregistered", {
       headers: {
         Authorization: token,
       },

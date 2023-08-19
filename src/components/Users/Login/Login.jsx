@@ -8,14 +8,24 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  const onSubmit = (values) => {
-    login(values);
-    notification.success({
-      message: "Successfully logged",
-    });
+  const onSubmit = (user) => {
+    login(user);
+
     setTimeout(() => {
-      navigate("/");
-    }, 3000);
+      const token = JSON.parse(localStorage.getItem("token"));
+      if (!token) {
+        notification.error({
+          message: "Wrong email or password",
+        });
+      } else {
+        notification.success({
+          message: "Successfully logged",
+        });
+        setTimeout(() => {
+          navigate("/");
+        }, 3000);
+      }
+    }, 100);
   };
 
   return (
