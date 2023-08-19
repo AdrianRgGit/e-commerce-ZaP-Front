@@ -9,7 +9,7 @@ const Cart = () => {
     return <span>You have no items in your cart</span>;
   }
 
-  const cartItem = cart.map((cartItem, i) => {
+  const cartItem = cart.map((product, i) => {
     return (
       <div className="cart" key={i}>
         <Card
@@ -21,22 +21,22 @@ const Cart = () => {
             padding: 10,
           }}
         >
-          <button onClick={() => addCart(product)}>Add cart</button>
-
           <img
             src={product.image}
             style={{
               maxWidth: 150,
             }}
+            alt="product"
           />
           <span>{product.price} </span>
-          <span>Card content</span>
+
+          <button onClick={() => addCart(product)}>Add cart</button>
         </Card>
       </div>
     );
   });
 
-  return <div>Cart</div>;
+  return <div>{cartItem}</div>;
 };
 
 export default Cart;

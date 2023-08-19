@@ -39,7 +39,6 @@ const Products = () => {
           alt="product"
         />
         <span>{product.price} </span>
-        <span>Card content</span>
       </Card>
     );
   });
