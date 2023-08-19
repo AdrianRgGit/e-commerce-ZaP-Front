@@ -1,30 +1,39 @@
 import { useContext, useEffect } from "react";
 import { UserContext } from "../../../context/UserContext/UserState";
-import { Spin } from "antd";
+import { Card, Spin } from "antd";
+import { Link } from "react-router-dom";
 
 const UserInfo = () => {
   const { user, getUserInfo } = useContext(UserContext);
 
-    useEffect(() => {
-      getUserInfo();
-    }, []);
+  useEffect(() => {
+    getUserInfo();
+  }, []);
 
-    if (!user) {
-      return <Spin size="large" />;
-    }
+  if (!user) {
+    return <Spin size="large" />;
+  }
 
-    const { name } = user.getUser;
-    console.log(name);
+  const { name, email, avatar } = user.getUser;
 
   return (
     <div>
       <Card
-        title={user.name}
+        title={name}
         style={{
           width: 300,
         }}
       >
-        <p>{user.email}</p>
+        <img
+          src={avatar}
+          style={{
+            maxWidth: 150,
+          }}
+          alt="product"
+        />
+
+        <p>{email}</p>
+        <Link to="/orders"> My orders</Link>
       </Card>
     </div>
   );

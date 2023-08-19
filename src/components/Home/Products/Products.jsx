@@ -36,6 +36,7 @@ const Products = () => {
           style={{
             maxWidth: 150,
           }}
+          alt="product"
         />
         <span>{product.price} </span>
         <span>Card content</span>
