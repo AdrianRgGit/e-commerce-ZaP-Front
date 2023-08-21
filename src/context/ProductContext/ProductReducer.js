@@ -7,10 +7,15 @@ const products = (state, action) => {
       };
 
     case "ADD_CART":
-      console.log(state)
       return {
         ...state,
         cart: [action.payload, ...state.cart],
+      };
+
+    case "CLEAR_CART":
+      return {
+        ...state,
+        cart: [],
       };
 
     default:

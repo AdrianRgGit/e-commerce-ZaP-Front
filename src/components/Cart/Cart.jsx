@@ -1,9 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ProductContext } from "../../context/ProductContext/ProductState";
 import { Card } from "antd";
 
 const Cart = () => {
-  const { cart } = useContext(ProductContext);
+  const { cart, clearCart } = useContext(ProductContext);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   if (cart.length <= 0) {
     return <span>You have no items in your cart</span>;
@@ -29,14 +33,17 @@ const Cart = () => {
             alt="product"
           />
           <span>{product.price} </span>
-
-          <button onClick={() => addCart(product)}>Add cart</button>
         </Card>
       </div>
     );
   });
 
-  return <div>{cartItem}</div>;
+  return (
+    <>
+      <div>{cartItem}</div>
+      <button onClick={() => clearCart()}>Clear cart</button>
+    </>
+  );
 };
 
 export default Cart;
