@@ -5,10 +5,11 @@ import { UserProvider } from "./context/UserContext/UserState";
 import { ProductProvider } from "./context/ProductContext/ProductState";
 import { OrderProvider } from "./context/OrderContext/OrderState";
 
-import Users from "./components/Users/Users";
 import Home from "./components/Home/Home";
 import Login from "./components/Users/Login/Login";
 import Logout from "./components/Users/Logout/Logout";
+import SignUp from "./components/Users/SignUp/SignUp";
+
 import Header from "./components/Header/Header";
 import Cart from "./components/Cart/Cart";
 import UserInfo from "./components/Users/UserInfo/UserInfo";
@@ -33,6 +34,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/logout" element={<Logout />} />
                 <Route path="/profile" element={<UserInfo />} />
+                <Route path="/signup" element={<SignUp />} />
               </Routes>
 
               {/* Products */}
