@@ -6,16 +6,16 @@ const Products = () => {
   const { products, cart, getProducts, addCart } = useContext(ProductContext);
 
   useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
+  useEffect(() => {
     getProducts();
   }, []);
 
   if (!products) {
     return <Spin size="large" />;
   }
-
-  // useEffect(() => {
-  //   localStorage.setItem("cart", JSON.stringify(cart));
-  // }, [cart]);
 
   const product = products.map((product) => {
     return (
