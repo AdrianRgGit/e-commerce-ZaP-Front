@@ -9,7 +9,7 @@ const initialState = {
   cart: cart ? cart : [],
 };
 
-const API_URL = "http://localhost:8080/";
+const API_URL = "http://localhost:8080/shoes/";
 
 export const ProductContext = createContext(initialState);
 
@@ -17,7 +17,7 @@ export const ProductProvider = ({ children }) => {
   const [state, dispatch] = useReducer(ProductReducer, initialState);
 
   const getProducts = async () => {
-    const res = await axios.get(API_URL + "shoes/showall");
+    const res = await axios.get(API_URL + "showall");
 
     dispatch({
       type: "GET_PRODUCTS",

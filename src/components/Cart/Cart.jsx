@@ -1,9 +1,11 @@
 import React, { useContext, useEffect } from "react";
 import { ProductContext } from "../../context/ProductContext/ProductState";
 import { Card } from "antd";
+import { OrderContext } from "../../context/OrderContext/OrderState";
 
 const Cart = () => {
   const { cart, clearCart } = useContext(ProductContext);
+  const { createOrder } = useContext(OrderContext);
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -12,6 +14,11 @@ const Cart = () => {
   if (cart.length <= 0) {
     return <span>You have no items in your cart</span>;
   }
+
+  const createNewOrder = () => {
+    createOrder(cart);
+    clearCart();
+  };
 
   const cartItem = cart.map((product, i) => {
     return (
@@ -41,7 +48,10 @@ const Cart = () => {
   return (
     <>
       <div>{cartItem}</div>
-      <button onClick={() => clearCart()}>Clear cart</button>
+      <span>
+        <button onClick={() => createNewOrder()}>Create order</button>
+        <button onClick={() => clearCart()}>Clear cart</button>
+      </span>
     </>
   );
 };
