@@ -49,7 +49,7 @@ const Cart = () => {
     <>
       <div>{cartItem}</div>
       <span>
-        <button onClick={() => createNewOrder()}>Create order</button>
+        <button onClick={() => createNewOrder(cart)}>Create order</button>
         <button onClick={() => clearCart()}>Clear cart</button>
       </span>
     </>

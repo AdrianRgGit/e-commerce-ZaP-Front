@@ -1,0 +1,15 @@
+@import "../../../index.scss";
+
+#top-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: $black-back;
+  padding: 5px;
+}
+
+// .search-input {
+//   background-color: $black-back;
+//   color: $primary-color;
+// }
