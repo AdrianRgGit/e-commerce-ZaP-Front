@@ -1,6 +1,6 @@
 // Font style
-$font-family-heebo: 'Heebo', sans-serif;
-$font-family-roboto: 'Roboto', sans-serif;
+$font-family-heebo: "Heebo", sans-serif;
+$font-family-roboto: "Roboto", sans-serif;
 
 // Colors
 $primary-color: rgb(200, 228, 178);
@@ -20,6 +20,10 @@ $fourth-color-05: rgba(255, 217, 183, 0.5);
 // Background colors
 $white-back: rgb(220, 220, 220);
 $black-back: rgb(50, 50, 50);
+
+:root {
+  background-color: $black-back;
+}
 
 // :root {
 //   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
