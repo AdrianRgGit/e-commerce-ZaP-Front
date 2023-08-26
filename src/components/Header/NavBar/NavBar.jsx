@@ -14,21 +14,35 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="nav-bar">
-      <Link to="/">Home | </Link>
+    <nav className="nav-container">
+      <Link className="home-link" to="/">
+        Home{" "}
+      </Link>
 
       {token ? (
         <>
-          <Link to="/logout" onClick={logoutUser}>
-            Logout |
+          <Link className="logout-link" to="/logout" onClick={logoutUser}>
+            Logout
           </Link>
-          <Link to="/profile"> Profile |</Link>
-          <Link to="/cart"> Cart</Link>
+          <Link className="profile-link" to="/profile">
+            {" "}
+            Profile
+          </Link>
+          <Link className="cart-link" to="/cart">
+            {" "}
+            Cart
+          </Link>
         </>
       ) : (
         <>
-          <Link to="/login"> Login |</Link>
-          <Link to="/signup"> Sign up</Link>
+          <Link className="login-link" to="/login">
+            {" "}
+            Login
+          </Link>
+          <Link className="signup-link" to="/signup">
+            {" "}
+            Sign up
+          </Link>
         </>
       )}
     </nav>

@@ -1,10 +1,22 @@
 @import "../../../index.scss";
 
-a{
-    color: $primary-color;
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  padding: 10px;
+  background-color: $white-back;
 }
 
-a:hover{
-    color: $primary-color;
-    opacity: 0.5;
+a {
+  font-family: $font-family-heebo;
+  font-weight: 800;
+  text-decoration: none;
+  color: $tertiary-color;
+}
+
+a:hover {
+  color: $tertiary-color-05;
 }
