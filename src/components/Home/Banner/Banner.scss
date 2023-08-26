@@ -1,0 +1,19 @@
+@import "../../../index.scss";
+
+.carousel-container {
+  min-height: 500px;
+  color: $white-color;
+  line-height: 160px;
+  text-align: center;
+  background: $black-back;
+}
+
+.img-container-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-carousel {
+    // width: 100%;
+}
