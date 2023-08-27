@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { ProductContext } from "../../../context/ProductContext/ProductState";
-import { Card, Spin } from "antd";
-import "./Products.scss"
+import { Card, Col, Row, Spin } from "antd";
+import "./Products.scss";
 
 const Products = () => {
   const { products, cart, getProducts, addCart } = useContext(ProductContext);
@@ -20,25 +20,26 @@ const Products = () => {
 
   const product = products.map((product) => {
     return (
-      <Card
-        className="card-style"
-        key={product.id}
-        title={product.brand}
-      >
-        <button className="button" onClick={() => addCart(product)}>
-          +
-        </button>
-
-        <img
-          className="card-img"
-          src={product.image}
-          style={{
-            maxWidth: 150,
-          }}
-          alt="product"
-        />
-        <span>{product.price} </span>
-      </Card>
+      <div className="card-container" key={product.id}>
+        <Card className="card-style" title={product.brand}>
+          <div className="button-container">
+            <button className="button" onClick={() => addCart(product)}>
+              +
+            </button>
+          </div>
+          <figure className="img-container">
+            <img
+              className="card-img"
+              src={product.image}
+              style={{
+                maxWidth: 150,
+              }}
+              alt="product"
+            />
+          </figure>
+          <span>{product.price} €</span>
+        </Card>
+      </div>
     );
   });
 

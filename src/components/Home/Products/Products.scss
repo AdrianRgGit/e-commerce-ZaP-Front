@@ -1,8 +1,17 @@
 @import "../../../index.scss";
 
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  // flex-direction: row;
+  margin: 10px;
+  
+}
+
 .card-style {
   display: flex;
-  justify-content: center;      
-  background-color: $white-back;
-  border-radius: 0px;
+  width: 400px;
+  height: 300px;
+  padding: 10px;
+  flex-direction: row;
 }

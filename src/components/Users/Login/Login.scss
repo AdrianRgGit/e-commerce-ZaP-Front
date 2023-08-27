@@ -1,0 +1,16 @@
+@import "../../../index.scss";
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 5%;
+  width: 50%;
+  height: 50%;
+  background-color: $secondary-color;
+  border: solid $white-back;
+}
+
+.form-style{
+    padding: 100px;
+}
