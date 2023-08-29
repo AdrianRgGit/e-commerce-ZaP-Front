@@ -7,6 +7,7 @@ const UserInfo = () => {
   const { user, getUserInfo } = useContext(UserContext);
 
   useEffect(() => {
+    console.log(user);
     getUserInfo();
   }, []);
 
