@@ -6,6 +6,24 @@ const products = (state, action) => {
         product: action.payload,
       };
 
+    case "SHOW_DESC":
+      return {
+        ...state,
+        product: action.payload,
+      };
+
+    case "SHOW_ASC":
+      return {
+        ...state,
+        product: action.payload,
+      };
+
+    case "SHOW_BY_BRAND":
+      return {
+        ...state,
+        product: action.payload,
+      };
+
     case "ADD_CART":
       return {
         ...state,

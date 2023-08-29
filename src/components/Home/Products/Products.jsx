@@ -1,10 +1,17 @@
 import React, { useContext, useEffect } from "react";
 import { ProductContext } from "../../../context/ProductContext/ProductState";
-import { Card, Col, Row, Spin } from "antd";
+import { Card, Col, Row, Slider, Spin } from "antd";
 import "./Products.scss";
 
 const Products = () => {
-  const { products, cart, getProducts, addCart } = useContext(ProductContext);
+  const {
+    products,
+    cart,
+    getProducts,
+    showProductsDesc,
+    showProductsAsc,
+    addCart,
+  } = useContext(ProductContext);
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -20,26 +27,26 @@ const Products = () => {
 
   const product = products.map((product) => {
     return (
-      <div className="card-container" key={product.id}>
-        <Card className="card-style" title={product.brand}>
-          <div className="button-container">
-            <button className="button" onClick={() => addCart(product)}>
-              +
-            </button>
-          </div>
-          <figure className="img-container">
-            <img
-              className="card-img"
-              src={product.image}
-              style={{
-                maxWidth: 150,
-              }}
-              alt="product"
-            />
-          </figure>
-          <span>{product.price} €</span>
-        </Card>
-      </div>
+        <div className="card-container" key={product.id}>
+          <Card className="card-style" title={product.brand}>
+            <div className="button-container">
+              <button className="button" onClick={() => addCart(product)}>
+                +
+              </button>
+            </div>
+            <figure className="img-container">
+              <img
+                className="card-img"
+                src={product.image}
+                style={{
+                  maxWidth: 150,
+                }}
+                alt="product"
+              />
+            </figure>
+            <span>{product.price} €</span>
+          </Card>
+        </div>
     );
   });
 
