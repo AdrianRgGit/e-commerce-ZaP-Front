@@ -2,10 +2,12 @@ import React, { useContext, useEffect } from "react";
 import { ProductContext } from "../../context/ProductContext/ProductState";
 import { Card } from "antd";
 import { OrderContext } from "../../context/OrderContext/OrderState";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { cart, clearCart } = useContext(ProductContext);
   const { createOrder } = useContext(OrderContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -18,6 +20,9 @@ const Cart = () => {
   const createNewOrder = () => {
     createOrder(cart);
     clearCart();
+    setTimeout(() => {
+      navigate("/");
+    }, 3000);
   };
 
   const cartItem = cart.map((product, i) => {

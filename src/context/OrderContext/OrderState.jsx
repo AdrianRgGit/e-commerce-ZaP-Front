@@ -6,13 +6,16 @@ const API_URL = "http://localhost:8080/orders/";
 export const OrderContext = createContext();
 
 export const OrderProvider = ({ children }) => {
-  const createOrder = async (order) => {
+  const createOrder = async (cart) => {
     const token = JSON.parse(localStorage.getItem("token"));
+    const cartIds = cart.map((element) => element.id);
+
+    console.log(cartIds);
 
     try {
       await axios.post(
         API_URL + "create",
-        { productIds: order },
+        { ShoeOrderId: cartIds },
 
         {
           headers: {
