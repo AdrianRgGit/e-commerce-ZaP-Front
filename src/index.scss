@@ -1,4 +1,24 @@
 // Font style
+@font-face {
+  font-family: "Offbit101";
+  src: url("./assets/fonts/OffBitTrial-101.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Offbit101bold";
+  src: url("./assets/fonts/OffBitTrial-101Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Offbit101dot";
+  src: url("./assets/fonts/OffBitTrial-Dot.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Offbit101dotbold";
+  src: url("./assets/fonts/OffBitTrial-DotBold.otf") format("truetype");
+}
+
 $font-family-heebo: "Heebo", sans-serif;
 $font-family-roboto: "Roboto", sans-serif;
 
@@ -17,13 +37,17 @@ $secondary-color-05: rgba(158, 210, 190, 0.5);
 $tertiary-color-05: rgba(126, 170, 146, 0.5);
 $fourth-color-05: rgba(255, 217, 183, 0.5);
 
+$white-color-05: rgba(240, 240, 240, 0.5);
+$black-color-05: rgba(30, 30, 30, 0.5);
+
 // Background colors
 $white-back: rgb(220, 220, 220);
 $grey-back: rgb(190, 190, 190);
-$black-back: rgb(50, 50, 50);
+$darkgrey-back: rgb(40, 40, 40);
+$black-back: rgb(32, 32, 32);
 
 :root {
-  background-color: $white-back;
+  background-color: $black-back;
 }
 
 // :root {

@@ -8,16 +8,17 @@
   
 
   padding: 10px;
-  background-color: $grey-back;
+  background-color: $darkgrey-back;
 }
 
 a {
-  font-family: $font-family-heebo;
+  font-family: 'Offbit101dotbold', sans-serif;
+  font-size: 30px;
   font-weight: 800;
   text-decoration: none;
-  color: $tertiary-color;
+  color: $white-color;
 }
 
 a:hover {
-  color: $tertiary-color-05;
+  color: $white-color-05;
 }
