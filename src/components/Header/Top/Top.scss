@@ -5,11 +5,14 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: $black-back;
   padding: 5px;
 }
 
-// .search-input {
-//   background-color: $black-back;
-//   color: $primary-color;
-// }
+.logo-container {
+  height: 100px;
+  width: 100px;
+}
+
+.logo{
+  width: 100%;
+}

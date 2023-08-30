@@ -19,10 +19,11 @@ $fourth-color-05: rgba(255, 217, 183, 0.5);
 
 // Background colors
 $white-back: rgb(220, 220, 220);
+$grey-back: rgb(190, 190, 190);
 $black-back: rgb(50, 50, 50);
 
 :root {
-  background-color: $black-back;
+  background-color: $white-back;
 }
 
 // :root {

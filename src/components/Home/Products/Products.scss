@@ -1,17 +1,18 @@
 @import "../../../index.scss";
 
-.card-container {
+.products-container {
   display: flex;
-  flex-wrap: wrap;
-  // flex-direction: row;
-  margin: 10px;
-  
+  justify-content: center; /* Alinear las cartas a la izquierda */
+  flex-wrap: wrap; /* Permitir que las cartas se ajusten en la pantalla */
+  margin-top: 20px;
 }
 
-.card-style {
-  display: flex;
-  width: 400px;
-  height: 300px;
-  padding: 10px;
-  flex-direction: row;
+.card-container {
+  padding: 10px; /* Espaciado entre las cartas */
+  width: 300px;
+}
+
+.card-img {
+  max-width: 100%;
+  height: auto;
 }

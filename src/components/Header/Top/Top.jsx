@@ -7,8 +7,12 @@ const Top = () => {
   return (
     <>
       <header id="top-container">
-        <figure className="logo">
-          <img src="../../../assets/img/ZaP_logo.jpg" alt="zap_logo" />
+        <figure className="logo-container">
+          <img
+          className="logo"
+            src="https://img.freepik.com/vector-premium/diseno-logotipo-tienda-zapatillas-ilustracion-vector-zapatillas-deporte_668007-105.jpg?w=2000"
+            alt="zap_logo"
+          />
         </figure>
 
         <div className="search-container">

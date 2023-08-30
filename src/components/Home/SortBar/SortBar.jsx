@@ -37,16 +37,6 @@ const SortBar = () => {
             Desc
           </button>
         </div>
-        <div className="slider-container">
-          <Slider
-            className="price-range"
-            range={{
-              draggableTrack: true,
-            }}
-            defaultValue={[20, 50]}
-            max={300}
-          />
-        </div>
         <div className="selector-container">
           <label htmlFor="brand"></label>
           <select
