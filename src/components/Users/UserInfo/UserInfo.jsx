@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { UserContext } from "../../../context/UserContext/UserState";
 import { Card, Spin } from "antd";
 import { Link } from "react-router-dom";
+import "./UserInfo.scss";
 
 const UserInfo = () => {
   const { user, getUserInfo } = useContext(UserContext);
@@ -18,9 +19,9 @@ const UserInfo = () => {
   const { name, email, avatar } = user.getUser;
 
   return (
-    <div>
+    <div className="card-container">
       <Card
-        title={name}
+        className="card-style"
         style={{
           width: 300,
         }}
@@ -32,9 +33,9 @@ const UserInfo = () => {
           }}
           alt="avatar"
         />
-
+        <p>{name}</p>
         <p>{email}</p>
-        <Link to="/orders"> My orders</Link>
+        <Link className="link" to="#"> My orders</Link>
       </Card>
     </div>
   );
