@@ -8,8 +8,6 @@ const Products = () => {
     products,
     cart,
     getProducts,
-    showProductsDesc,
-    showProductsAsc,
     addCart,
   } = useContext(ProductContext);
 

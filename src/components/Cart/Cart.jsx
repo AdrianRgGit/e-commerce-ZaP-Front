@@ -3,6 +3,7 @@ import { ProductContext } from "../../context/ProductContext/ProductState";
 import { Card } from "antd";
 import { OrderContext } from "../../context/OrderContext/OrderState";
 import { useNavigate } from "react-router-dom";
+import "./Cart.scss";
 
 const Cart = () => {
   const { cart, clearCart } = useContext(ProductContext);
@@ -14,7 +15,11 @@ const Cart = () => {
   }, [cart]);
 
   if (cart.length <= 0) {
-    return <span>You have no items in your cart</span>;
+    return (
+      <div className="text-container">
+        <span className="cart-empty">You have no items in your cart</span>;
+      </div>
+    );
   }
 
   const createNewOrder = () => {
@@ -27,24 +32,15 @@ const Cart = () => {
 
   const cartItem = cart.map((product, i) => {
     return (
-      <div className="cart" key={i}>
-        <Card
-          title={product.brand}
-          style={{
-            display: "flex",
-            width: 300,
-            margin: 10,
-            padding: 10,
-          }}
-        >
-          <img
-            src={product.image}
-            style={{
-              maxWidth: 150,
-            }}
-            alt="product"
-          />
-          <span>{product.price} </span>
+      <div className="card-container" key={product.id}>
+        <Card className="card-style">
+          <h3 className="card-title">{product.brand}</h3>
+          <figure className="img-container">
+            <img className="card-img" src={product.image} alt="product" />
+          </figure>
+          <div className="price-container">
+            <span className="price">{product.price} €</span>
+          </div>
         </Card>
       </div>
     );
@@ -53,10 +49,14 @@ const Cart = () => {
   return (
     <>
       <div>{cartItem}</div>
-      <span>
-        <button onClick={() => createNewOrder(cart)}>Create order</button>
-        <button onClick={() => clearCart()}>Clear cart</button>
-      </span>
+      <div className="button-container">
+        <button className="button" onClick={() => createNewOrder(cart)}>
+          Create order
+        </button>
+        <button className="button" onClick={() => clearCart()}>
+          Clear cart
+        </button>
+      </div>
     </>
   );
 };
