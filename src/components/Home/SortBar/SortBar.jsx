@@ -19,13 +19,6 @@ const SortBar = () => {
     }
   };
 
-  // const onChange = (value) => {
-  //   console.log("onChange: ", value);
-  // };
-  // const onAfterChange = (value) => {
-  //   console.log("onAfterChange: ", value);
-  // };
-
   return (
     <>
       <div className="sort-container">
@@ -36,7 +29,7 @@ const SortBar = () => {
             onClick={showProductsAsc}
           />
 
-          <span className="span-text">Sort by price</span>
+          <span className="span-text" onClick={getProducts}>Sort by price</span>
           
           <img
             className="arrow"
