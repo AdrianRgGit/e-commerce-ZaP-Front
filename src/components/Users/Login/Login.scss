@@ -7,10 +7,11 @@
   margin-top: 5%;
   width: 50%;
   height: 50%;
-  background-color: $secondary-color;
-  border: solid $white-back;
+  background-color: $white-back;
+  border-radius: 10px;
+  border: solid 5px $grey-back;
 }
 
-.form-style{
-    padding: 100px;
+.form-style {
+  padding: 100px;
 }

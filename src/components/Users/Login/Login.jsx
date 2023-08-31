@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { UserContext } from "../../../context/UserContext/UserState";
 import { useNavigate } from "react-router-dom";
 import { Button, Form, Input, notification } from "antd";
-import "./Login.scss"
+import "./Login.scss";
 
 const Login = () => {
   const { login } = useContext(UserContext);
@@ -82,7 +82,7 @@ const Login = () => {
             span: 16,
           }}
         >
-          <Button type="primary" htmlType="submit">
+          <Button className="button" type="primary" htmlType="submit">
             Submit
           </Button>
         </Form.Item>

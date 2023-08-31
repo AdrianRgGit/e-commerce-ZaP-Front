@@ -90,7 +90,7 @@ const SignUp = () => {
             span: 16,
           }}
         >
-          <Button type="primary" htmlType="submit">
+          <Button className="button" type="primary" htmlType="submit">
             Submit
           </Button>
         </Form.Item>
