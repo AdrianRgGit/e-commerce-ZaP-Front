@@ -30,7 +30,7 @@ const UserInfo = () => {
           style={{
             maxWidth: 150,
           }}
-          alt="product"
+          alt="avatar"
         />
 
         <p>{email}</p>

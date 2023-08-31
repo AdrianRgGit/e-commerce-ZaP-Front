@@ -45,7 +45,7 @@ const SortBar = () => {
             onChange={handleBrandChange}
             value={selectedBrand}
           >
-            <option value="">Todas las marcas</option>
+            <option value="">All</option>
             <option value="Nike">Nike</option>
             <option value="Adidas">Adidas</option>
             <option value="Puma">Puma</option>

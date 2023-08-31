@@ -32,7 +32,7 @@ function App() {
               {/* Users */}
               <Routes>
                 <Route path="/login" element={<Login />} />
-                <Route path="/logout" element={<Logout />} />
+                <Route path="/" element={<Logout />} />
                 <Route path="/profile" element={<UserInfo />} />
                 <Route path="/signup" element={<SignUp />} />
               </Routes>

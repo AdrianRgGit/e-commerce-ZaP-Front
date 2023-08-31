@@ -8,13 +8,25 @@
   padding: 5px;
 }
 
+@keyframes cambioColorAnim {
+  0% {
+    color: $white-back;
+  }
+
+  100% {
+    color: $grey-back;
+  }
+}
+
 .title {
   margin: 0;
   padding: 10px;
   font-family: "Offbit101dotbold";
   color: $white-color;
   font-size: 5em;
+  animation: cambioColorAnim 2s infinite;
 }
+
 
 .container-input {
   position: relative;
