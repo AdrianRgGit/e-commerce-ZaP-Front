@@ -14,6 +14,7 @@ const SignUp = () => {
     notification.success({
       message: "Successfully registered",
     });
+    
     setTimeout(() => {
       login(values);
       navigate("/");
